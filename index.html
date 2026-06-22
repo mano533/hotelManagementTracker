@@ -58,45 +58,120 @@
       }
 
       /* HERO */
+      /* HERO SECTION */
 
       .hero {
+        position: relative;
         height: 100vh;
-        background:
-          linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-          url("images/hero.jpg");
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* BACKGROUND IMAGE */
+
+      .hero-bg {
+        position: absolute;
+        inset: 0;
+
+        background-image: url("image/image3.png");
         background-size: cover;
         background-position: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        color: white;
-        padding: 20px;
+
+        animation: zoomOutHero 10s ease-out forwards;
       }
+
+      /* DARK OVERLAY */
+
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+      }
+
+      /* CONTENT */
 
       .hero-content {
+        position: relative;
+        z-index: 10;
+        text-align: center;
+        color: white;
         max-width: 900px;
+        padding: 10px;
       }
 
-      .hero h1 {
-        font-size: 70px;
-        line-height: 1.1;
+      .hero-badge {
+        display: inline-block;
+        background: #f59e0b;
+        padding: 10px 20px;
+        border-radius: 50px;
+        font-size: 14px;
+        font-weight: 600;
         margin-bottom: 20px;
       }
 
-      .hero p {
-        font-size: 20px;
-        margin-bottom: 30px;
+      .hero-content h1 {
+        font-size: 72px;
+        line-height: 1;
+        /* margin-bottom: 0px; */
+      }
+
+      .hero-content p {
+        font-size: 22px;
+        line-height: 1.8;
+        /* margin-bottom: 15px; */
+      }
+
+      /* BUTTONS */
+
+      .hero-buttons {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
       }
 
       .btn {
-        display: inline-block;
         padding: 15px 35px;
         background: #f59e0b;
         color: white;
         text-decoration: none;
         border-radius: 50px;
         font-weight: 600;
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        transform: translateY(-3px);
+      }
+
+      .btn-secondary {
+        background: #25d366;
+      }
+
+      /* ZOOM OUT ANIMATION */
+
+      @keyframes zoomOutHero {
+        0% {
+          transform: scale(1.25);
+        }
+
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      /* MOBILE */
+
+      @media (max-width: 768px) {
+        .hero-content h1 {
+          font-size: 42px;
+        }
+
+        .hero-content p {
+          font-size: 16px;
+        }
       }
 
       /* SECTION */
@@ -251,15 +326,26 @@
     </nav>
 
     <section class="hero">
+      <div class="hero-bg"></div>
+
+      <div class="hero-overlay"></div>
+
       <div class="hero-content">
-        <h1>Premium Griha Pravesh & Housewarming Decoration</h1>
+        <span class="hero-badge"> Premium Housewarming Decoration </span>
+        <h1>Traditional Griha Pravesh & Kitchen Decoration Services</h1>
 
         <p>
-          Kitchen Decoration • Peacock Theme • Village Theme • Floral Rangoli •
-          Traditional Setup
+          Floral Decoration • Peacock Theme • Village Theme • Rangoli Art •
+          Complete Housewarming Setup
         </p>
 
-        <a href="#gallery" class="btn">View Our Work</a>
+        <div class="hero-buttons">
+          <a href="#gallery" class="btn"> View Gallery </a>
+
+          <a href="https://wa.me/916381044569" class="btn btn-secondary">
+            Book Now
+          </a>
+        </div>
       </div>
     </section>
 
