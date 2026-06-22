@@ -1,1 +1,368 @@
-readme 
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Shubha Griha Decor | Housewarming Decoration</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: #fffdf8;
+        color: #333;
+      }
+
+      /* NAVBAR */
+
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: white;
+        padding: 18px 8%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+        z-index: 999;
+      }
+
+      .logo {
+        font-size: 28px;
+        font-weight: 700;
+        color: #d97706;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 30px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+      }
+
+      /* HERO */
+
+      .hero {
+        height: 100vh;
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+          url("images/hero.jpg");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        padding: 20px;
+      }
+
+      .hero-content {
+        max-width: 900px;
+      }
+
+      .hero h1 {
+        font-size: 70px;
+        line-height: 1.1;
+        margin-bottom: 20px;
+      }
+
+      .hero p {
+        font-size: 20px;
+        margin-bottom: 30px;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 15px 35px;
+        background: #f59e0b;
+        color: white;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 600;
+      }
+
+      /* SECTION */
+
+      section {
+        padding: 90px 8%;
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 50px;
+        color: #b45309;
+      }
+
+      /* SERVICES */
+
+      .services {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+      }
+
+      .service {
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        transition: 0.3s;
+      }
+
+      .service:hover {
+        transform: translateY(-10px);
+      }
+
+      .service h3 {
+        margin-bottom: 10px;
+      }
+
+      /* GALLERY */
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 20px;
+      }
+
+      .gallery img {
+        width: 100%;
+        height: 420px;
+        object-fit: cover;
+        border-radius: 20px;
+        transition: 0.4s;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .gallery img:hover {
+        transform: scale(1.04);
+      }
+
+      /* PACKAGE */
+
+      .packages {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+
+      .package {
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        text-align: center;
+      }
+
+      .price {
+        font-size: 40px;
+        font-weight: bold;
+        color: #f59e0b;
+        margin: 15px 0;
+      }
+
+      .package ul {
+        list-style: none;
+        line-height: 2;
+      }
+
+      /* CONTACT */
+
+      .contact {
+        background: #fff7ed;
+        text-align: center;
+      }
+
+      .contact h2 {
+        margin-bottom: 20px;
+      }
+
+      .contact p {
+        font-size: 18px;
+        margin-bottom: 30px;
+      }
+
+      .whatsapp {
+        display: inline-block;
+        padding: 15px 35px;
+        background: #25d366;
+        color: white;
+        text-decoration: none;
+        border-radius: 50px;
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      /* FOOTER */
+
+      footer {
+        background: #111;
+        color: white;
+        text-align: center;
+        padding: 30px;
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 40px;
+        }
+
+        .hero p {
+          font-size: 16px;
+        }
+
+        nav ul {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <div class="logo">Shubha Griha Decor</div>
+
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Premium Griha Pravesh & Housewarming Decoration</h1>
+
+        <p>
+          Kitchen Decoration • Peacock Theme • Village Theme • Floral Rangoli •
+          Traditional Setup
+        </p>
+
+        <a href="#gallery" class="btn">View Our Work</a>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2 class="section-title">Our Services</h2>
+
+      <div class="services">
+        <div class="service">
+          <h3>🌸 Kitchen Decoration</h3>
+          <p>Elegant floral kitchen decoration for housewarming ceremonies.</p>
+        </div>
+
+        <div class="service">
+          <h3>🦚 Peacock Theme</h3>
+          <p>Premium peacock themed decorative setup.</p>
+        </div>
+
+        <div class="service">
+          <h3>🪔 Griha Pravesh Setup</h3>
+          <p>Traditional and spiritual housewarming decorations.</p>
+        </div>
+
+        <div class="service">
+          <h3>🎨 Rangoli Design</h3>
+          <p>Beautiful flower rangoli handcrafted for your event.</p>
+        </div>
+
+        <div class="service">
+          <h3>🐘 Traditional Theme</h3>
+          <p>Village-inspired and cultural decorative arrangements.</p>
+        </div>
+
+        <div class="service">
+          <h3>🏡 Full House Decoration</h3>
+          <p>Complete decoration package for your new home.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h2 class="section-title">Our Recent Work</h2>
+
+      <div class="gallery">
+        <img src="image/1000015777.jpg" />
+        <img src="image/1000015781.jpg" />
+        <img src="image/1000015782.jpg" />
+        <img src="image/1000020597.jpg" />
+        <img src="image/1000020602.jpg" />
+        <img src="image/1000020604.jpg" />
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Packages</h2>
+
+      <div class="packages">
+        <div class="package">
+          <h3>Silver</h3>
+          <div class="price">₹2,999</div>
+          <ul>
+            <li>Kitchen Decoration</li>
+            <li>Flower Border</li>
+            <li>Mini Rangoli</li>
+          </ul>
+        </div>
+
+        <div class="package">
+          <h3>Gold</h3>
+          <div class="price">₹5,999</div>
+          <ul>
+            <li>Peacock Theme</li>
+            <li>Village Theme</li>
+            <li>Decorative Props</li>
+            <li>Rangoli</li>
+          </ul>
+        </div>
+
+        <div class="package">
+          <h3>Premium</h3>
+          <div class="price">₹12,999</div>
+          <ul>
+            <li>Complete House Decoration</li>
+            <li>Kitchen Styling</li>
+            <li>Custom Theme</li>
+            <li>Premium Floral Setup</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Book Your Decoration Today</h2>
+
+      <p>Call or WhatsApp us for bookings and custom decoration themes.</p>
+
+      <a href="https://wa.me/919999999999" class="whatsapp">
+        📱 WhatsApp Now
+      </a>
+    </section>
+
+    <footer>
+      <h3>Shubha Griha Decor</h3>
+      <p>Making Every Housewarming Memorable</p>
+    </footer>
+  </body>
+</html>
